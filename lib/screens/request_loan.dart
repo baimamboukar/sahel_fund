@@ -36,9 +36,9 @@ class RequestLoan extends ConsumerWidget {
               ),
               SfSlider(
                   min: 0.0,
-                  max: 1000000000.0,
+                  max: 12.0,
                   value: amount.state,
-                  interval: 100,
+                  interval: 1,
                   showTicks: true,
                   showLabels: true,
                   enableTooltip: true,
