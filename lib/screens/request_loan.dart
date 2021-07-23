@@ -41,21 +41,16 @@ class RequestLoan extends ConsumerWidget {
                   children: [Text("Min Amount"), Text("Max amount")],
                 ),
               ),
-             SfSlider(
-       min: 0.0,
-       max: 100.0,
-       value: _value,
-       interval: 20,
-       showTicks: true,
-       showLabels: true,
-       enableTooltip: true,
-       minorTicksPerInterval: 1,
-       onChanged: (dynamic value){
-         setState(() {
-           _value = value;
-         });
-       },
-     ),
+              SfSlider(
+                  min: 0.0,
+                  max: 100.0,
+                  value: 10,
+                  interval: 20,
+                  showTicks: true,
+                  showLabels: true,
+                  enableTooltip: true,
+                  minorTicksPerInterval: 1,
+                  onChanged: (dynamic value) {}),
               Padding(
                 padding: const EdgeInsets.only(left: 25.0, right: 25.0),
                 child: Row(
