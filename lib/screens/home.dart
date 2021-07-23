@@ -92,8 +92,16 @@ class _SahelFundHomeState extends State<SahelFundHome> {
                                   const SizedBox(height: 10.0),
                                   Text(
                                     "Education Loan",
+                                    style: Styles.designSubHeading(),
                                   ),
-                                  Text("\$185,000"),
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                        top: 8.0, left: 12.0),
+                                    child: Text(
+                                      "185,000 fcfa",
+                                      style: Styles.designHeading(),
+                                    ),
+                                  ),
                                   const SizedBox(height: 20.0),
                                   Text(
                                       "lorem ipsum dolor si amet do set cosectur de la hamma de la consectura")
@@ -126,7 +134,7 @@ class _SahelFundHomeState extends State<SahelFundHome> {
                           ),
                           ListTile(
                               leading: CircleAvatar(
-                                backgroundColor: Colors.yellow.shade100,
+                                backgroundColor: Palette.primary,
                                 child: Icon(LineIcons.paypalCreditCard,
                                     color: Colors.yellow),
                               ),
@@ -171,7 +179,7 @@ class _SahelFundHomeState extends State<SahelFundHome> {
           child: BreathingGlowingButton(
               width: 35.0,
               height: 35.0,
-              icon: LineIcons.moneyBill,
+              icon: Icons.monetization_on,
               iconColor: Colors.green,
               buttonBackgroundColor: Colors.transparent,
               glowColor: Colors.white),

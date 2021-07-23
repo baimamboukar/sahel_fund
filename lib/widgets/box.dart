@@ -10,12 +10,18 @@ class BoxContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: child,
-      decoration: BoxDecoration(
-          gradient: Palette.gradientWith(color),
-          border: Border.all(color: color, width: 0.75),
-          borderRadius: BorderRadius.circular(26.0)),
+    return Padding(
+      padding: const EdgeInsets.all(6.0),
+      child: Container(
+        child: Padding(
+          padding: const EdgeInsets.all(14.0),
+          child: child,
+        ),
+        decoration: BoxDecoration(
+            gradient: Palette.gradientWith(color),
+            border: Border.all(color: color, width: 1.20),
+            borderRadius: BorderRadius.circular(26.0)),
+      ),
     );
   }
 }

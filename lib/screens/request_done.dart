@@ -4,6 +4,7 @@ import 'package:line_icons/line_icons.dart';
 import 'package:sahelfund/screens/screens.dart';
 import 'package:sahelfund/utils/palette.dart';
 import 'package:sahelfund/utils/screen.dart';
+import 'package:sahelfund/utils/styles.dart';
 import 'package:sahelfund/widgets/widgets.dart';
 
 class RequestDone extends StatelessWidget {
@@ -24,11 +25,14 @@ class RequestDone extends StatelessWidget {
                   children: [
                     Icon(LineIcons.checkCircleAlt,
                         size: 56.0, color: Palette.light),
-                    Text("All done"),
+                    const SizedBox(height: 10.0),
+                    Text("All done", style: Styles.designSubHeading()),
                     Padding(
                       padding: const EdgeInsets.all(14.0),
                       child: Text(
-                          "`I'm sure I'm not the same, the next question is, what did the archbishop find?' The Mouse did not answer, so Alice soon began talking again.`"),
+                          "I'm sure I'm not the same, the next question is, what did the archbishop find?' The Mouse did not answer, so Alice soon began talking again",
+                          style: Styles.designText(
+                              18.0, Palette.black, true, false)),
                     ),
                     const SizedBox(
                       height: 30.0,

@@ -4,6 +4,9 @@ import 'package:line_icons/line_icons.dart';
 import 'package:sahelfund/screens/available_loans.dart';
 import 'package:sahelfund/screens/request_done.dart';
 import 'package:sahelfund/screens/request_loan.dart';
+import 'package:sahelfund/screens/screens.dart';
+import 'package:sahelfund/screens/submit_loan.dart';
+import 'package:sahelfund/screens/verification.dart';
 import 'package:sahelfund/utils/palette.dart';
 import 'package:sahelfund/utils/utils.dart';
 import 'package:sahelfund/widgets/widgets.dart';
@@ -48,7 +51,7 @@ List<DrawerItem> _drawerItems = [
       title: "Home",
       icon: LineIcons.lightningBolt,
       desc: "Main screen",
-      destination: FlutterLogo()),
+      destination: SahelFundHome()),
   DrawerItem(
       title: "Loan Offers",
       icon: LineIcons.dollarSign,
@@ -56,7 +59,7 @@ List<DrawerItem> _drawerItems = [
       destination: AvailableLoans()),
   DrawerItem(
       title: "Request",
-      icon: LineIcons.paperHand,
+      icon: LineIcons.moneyCheck,
       desc: "request a loan",
       destination: RequestLoan()),
   DrawerItem(
@@ -68,5 +71,25 @@ List<DrawerItem> _drawerItems = [
       title: "Submit",
       icon: LineIcons.paperPlane,
       desc: "Submit loan request",
-      destination: FlutterLogo()),
+      destination: SubmitLoan()),
+  DrawerItem(
+      title: "Settings",
+      icon: LineIcons.userCircleAlt,
+      desc: "profile settings",
+      destination: Settings()),
+  DrawerItem(
+      title: "Edit",
+      icon: LineIcons.edit,
+      desc: "edit profile",
+      destination: EditProfile()),
+  DrawerItem(
+      title: "Help",
+      icon: LineIcons.question,
+      desc: "FAQs",
+      destination: Help()),
+  DrawerItem(
+      title: "Verif",
+      icon: LineIcons.userShield,
+      desc: "Verification screen",
+      destination: Verification()),
 ];

@@ -10,4 +10,7 @@ class Styles {
           color: color);
   static TextStyle designHeading() => TextStyle(
       fontSize: 22.0, fontWeight: FontWeight.bold, color: Colors.green);
+
+  static TextStyle designSubHeading() => TextStyle(
+      fontSize: 18.0, fontWeight: FontWeight.bold, color: Colors.black45);
 }

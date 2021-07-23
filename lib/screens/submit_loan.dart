@@ -5,8 +5,8 @@ import 'package:sahelfund/utils/styles.dart';
 import 'package:sahelfund/widgets/box.dart';
 import 'package:sahelfund/widgets/widgets.dart';
 
-class AvailableLoans extends StatelessWidget {
-  const AvailableLoans({Key key}) : super(key: key);
+class SubmitLoan extends StatelessWidget {
+  const SubmitLoan({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class AvailableLoans extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                  "Based on your profile, you are eligible for he following loans",
+                  "Prepayment will be automatically collected from the debit card linked to your account",
                   style: Styles.designText(20.0, Palette.black, true, false)),
               BoxContainer(
                   color: Palette.primary,
@@ -97,35 +97,44 @@ class AvailableLoans extends StatelessWidget {
                     ],
                   )),
               BoxContainer(
-                  color: Colors.grey.shade300,
+                  color: Palette.light,
                   elevated: false,
-                  child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          "XAF 14.500",
-                          style: Styles.designSubHeading(),
-                        ),
-                        Text("View details")
-                      ])),
-              BoxContainer(
-                  color: Colors.grey.shade300,
-                  elevated: false,
-                  child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          "XAF 48.000",
-                          style: Styles.designSubHeading(),
-                        ),
-                        Text("View details")
-                      ])),
-              Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: Text("Want a different amount ? ",
-                    style:
-                        Styles.designText(18.0, Palette.primary, true, false)),
-              ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text("Loan purpose", style: Styles.designSubHeading()),
+                      BoxContainer(
+                          color: Colors.grey.shade300,
+                          elevated: false,
+                          child: TextField(
+                            decoration: InputDecoration(
+                                hintText: "Education",
+                                border: InputBorder.none,
+                                isDense: true),
+                          )),
+                      const SizedBox(
+                        height: 15.0,
+                      ),
+                      Text("Bank Account Information",
+                          style: Styles.designSubHeading()),
+                      BoxContainer(
+                          color: Colors.grey.shade300,
+                          elevated: false,
+                          child: TextField(
+                            decoration: InputDecoration(
+                                icon: Icon(LineIcons.building),
+                                hintText: "GT Bank - 81132002",
+                                border: InputBorder.none,
+                                isDense: true),
+                          )),
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Text("Use a different bank account... ",
+                            style: Styles.designText(
+                                16.0, Palette.primary, true, false)),
+                      ),
+                    ],
+                  )),
               Button(
                   callback: () => print("Hiii"),
                   label: "Continue",
