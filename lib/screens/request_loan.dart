@@ -29,21 +29,32 @@ class RequestLoan extends ConsumerWidget {
             children: [
               Text("How much do you want to borrow and for how long ? ",
                   style: Styles.designText(20.0, Palette.black, true, false)),
-              Slider(
-                value: amount.state,
-                min: 0.0,
-                max: 100.0,
-                label: "Amount",
-                focusNode: FocusNode(),
-                onChanged: (value) => amount.state,
-              ),
               Padding(
-                padding: const EdgeInsets.only(left: 25.0, right: 25.0),
+                padding: const EdgeInsets.only(top: 18.0),
+                child: Text("How much do you want ?",
+                    style: Styles.designSubHeading()),
+              ),
+              SfSlider(
+                  min: 0.0,
+                  max: 1000000000.0,
+                  value: amount.state,
+                  interval: 100,
+                  showTicks: true,
+                  showLabels: true,
+                  enableTooltip: true,
+                  onChanged: (dynamic value) {
+                    amount.state = value;
+                  }),
+              Padding(
+                padding:
+                    const EdgeInsets.only(left: 25.0, right: 25.0, top: 20.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [Text("Min Amount"), Text("Max amount")],
                 ),
               ),
+              Divider(),
+              Text("How much do you want ?", style: Styles.designSubHeading()),
               SfSlider(
                   min: 0.0,
                   max: 12.0,
@@ -56,7 +67,8 @@ class RequestLoan extends ConsumerWidget {
                     amount.state = value;
                   }),
               Padding(
-                padding: const EdgeInsets.only(left: 25.0, right: 25.0),
+                padding:
+                    const EdgeInsets.only(left: 25.0, right: 25.0, top: 20.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [Text("1 month"), Text("12 months")],
