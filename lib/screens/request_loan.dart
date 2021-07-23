@@ -5,6 +5,7 @@ import 'package:sahelfund/utils/palette.dart';
 import 'package:sahelfund/utils/styles.dart';
 import 'package:sahelfund/widgets/box.dart';
 import 'package:sahelfund/widgets/widgets.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
 final amountProvider = StateProvider<double>((ref) => 0.0);
 
@@ -44,13 +45,14 @@ class RequestLoan extends ConsumerWidget {
               SfSlider(
                   min: 0.0,
                   max: 100.0,
-                  value: 10,
+                  value: amount.state,
                   interval: 20,
                   showTicks: true,
                   showLabels: true,
                   enableTooltip: true,
-                  minorTicksPerInterval: 1,
-                  onChanged: (dynamic value) {}),
+                  onChanged: (dynamic value) {
+                    amount.state = value;
+                  }),
               Padding(
                 padding: const EdgeInsets.only(left: 25.0, right: 25.0),
                 child: Row(
