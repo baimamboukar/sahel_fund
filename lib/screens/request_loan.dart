@@ -8,6 +8,7 @@ import 'package:sahelfund/widgets/widgets.dart';
 import 'package:syncfusion_flutter_sliders/sliders.dart';
 
 final amountProvider = StateProvider<double>((ref) => 0.0);
+final durationProvider = StateProvider<int>((ref) => 1);
 
 class RequestLoan extends ConsumerWidget {
   const RequestLoan({Key key}) : super(key: key);
@@ -15,6 +16,7 @@ class RequestLoan extends ConsumerWidget {
   @override
   Widget build(BuildContext context, ScopedReader watch) {
     final amount = watch(amountProvider);
+    final duration = watch(durationProvider);
     return Scaffold(
         appBar: AppBar(title: Text("Request a loan")),
         body: SingleChildScrollView(
@@ -44,9 +46,9 @@ class RequestLoan extends ConsumerWidget {
               ),
               SfSlider(
                   min: 0.0,
-                  max: 100.0,
+                  max: 12.0,
                   value: amount.state,
-                  interval: 20,
+                  interval: 1,
                   showTicks: true,
                   showLabels: true,
                   enableTooltip: true,
@@ -73,7 +75,7 @@ class RequestLoan extends ConsumerWidget {
                           const SizedBox(
                             height: 15.0,
                           ),
-                          Text("${amount.state} (5%)")
+                          Text("${amount.state.toInt()} (5%)")
                         ],
                       ),
                       VerticalDivider(
