@@ -36,6 +36,7 @@ dependencies:
   flutter_riverpod: ^0.14.0+3
   hooks_riverpod: ^0.14.0
   get: ^4.2.0
+  syncfusion_flutter_sliders: ^19.2.48
 
 dev_dependencies:
   flutter_test:
