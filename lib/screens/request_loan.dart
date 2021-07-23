@@ -73,7 +73,7 @@ class RequestLoan extends ConsumerWidget {
                           const SizedBox(
                             height: 15.0,
                           ),
-                          Text("XAF 60K (5%)")
+                          Text("${amount.state} (5%)")
                         ],
                       ),
                       VerticalDivider(
