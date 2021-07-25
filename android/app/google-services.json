@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "201184784003",
+    "project_id": "sahel-fund-c7f41",
+    "storage_bucket": "sahel-fund-c7f41.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:201184784003:android:affec48cae7ef5b657b5b6",
+        "android_client_info": {
+          "package_name": "cf.djabbamatech.sahelfund"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "201184784003-2gfr696sdsfhok18d8uugj18om3fb3nn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBA0LTZDRiBosvuen4CljRBBAbm_9rUv3o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "201184784003-2gfr696sdsfhok18d8uugj18om3fb3nn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

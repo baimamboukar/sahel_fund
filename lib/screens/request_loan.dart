@@ -54,17 +54,17 @@ class RequestLoan extends ConsumerWidget {
                 ),
               ),
               Divider(),
-              Text("How much do you want ?", style: Styles.designSubHeading()),
+              Text("For how long ?", style: Styles.designSubHeading()),
               SfSlider(
                   min: 0.0,
                   max: 12.0,
-                  value: amount.state,
+                  value: duration.state,
                   interval: 1,
                   showTicks: true,
                   showLabels: true,
                   enableTooltip: true,
                   onChanged: (dynamic value) {
-                    amount.state = value;
+                    duration.state = value;
                   }),
               Padding(
                 padding:
