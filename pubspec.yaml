@@ -37,6 +37,9 @@ dependencies:
   hooks_riverpod: ^0.14.0
   get: ^4.2.0
   syncfusion_flutter_sliders: ^19.2.48
+  firebase_core: ^1.4.0
+  firebase_auth: ^3.0.1
+  cloud_firestore: ^2.4.0
 
 dev_dependencies:
   flutter_test:
