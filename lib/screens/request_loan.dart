@@ -34,17 +34,14 @@ class RequestLoan extends ConsumerWidget {
                 child: Text("How much do you want ?",
                     style: Styles.designSubHeading()),
               ),
-              SfSlider(
-                  min: 0.0,
-                  max: 12.0,
-                  value: amount.state,
-                  interval: 1,
-                  showTicks: true,
-                  showLabels: true,
-                  enableTooltip: true,
-                  onChanged: (dynamic value) {
-                    amount.state = value;
-                  }),
+              Slider(
+                value: amount.state,
+                min: 0.0,
+                max: 100.0,
+                label: "Amount",
+                focusNode: FocusNode(),
+                onChanged: (value) => amount.state,
+              ),
               Padding(
                 padding:
                     const EdgeInsets.only(left: 25.0, right: 25.0, top: 20.0),
@@ -55,17 +52,14 @@ class RequestLoan extends ConsumerWidget {
               ),
               Divider(),
               Text("For how long ?", style: Styles.designSubHeading()),
-              SfSlider(
-                  min: 0.0,
-                  max: 12.0,
-                  value: duration.state,
-                  interval: 1,
-                  showTicks: true,
-                  showLabels: true,
-                  enableTooltip: true,
-                  onChanged: (dynamic value) {
-                    duration.state = value;
-                  }),
+              Slider(
+                value: amount.state,
+                min: 0.0,
+                max: 100.0,
+                label: "Duration",
+                focusNode: FocusNode(),
+                onChanged: (value) => duration.state,
+              ),
               Padding(
                 padding:
                     const EdgeInsets.only(left: 25.0, right: 25.0, top: 20.0),
